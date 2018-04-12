@@ -2,15 +2,23 @@
   "name": "sleep-tracker",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css":
+      "less-watch-compiler --run-once --main-file=index.less src/styles src/styles",
+    "watch-css":
+      "npm run build-css && less-watch-compiler --main-file=index.less src/styles src/styles"
+  },
+  "dependencies": {
+    "less": "^3.0.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "devDependencies": {
+    "less-watch-compiler": "^1.11.2"
   }
 }
