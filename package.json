@@ -8,9 +8,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css":
-      "less-watch-compiler --run-once --main-file=index.less src/styles src/styles",
+      "less-watch-compiler --run-once --main-file=@index.less src/assets/styles src/assets/styles",
     "watch-css":
-      "npm run build-css && less-watch-compiler --main-file=index.less src/styles src/styles"
+      "npm run build-css && less-watch-compiler --main-file=@index.less src/assets/styles src/assets/styles"
   },
   "dependencies": {
     "less": "^3.0.1",

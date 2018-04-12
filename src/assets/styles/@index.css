@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v20/neILzCirqoswsqX9zoKmNg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  background: #222;
+  color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lobster', cursive, sans-serif;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+.App-logo {
+  height: 80px;
+}
+.App-header {
+  background-color: #111;
+  padding: 20px;
+}
+.App-title {
+  color: #5d4a8f;
+  font-size: 2em;
+}
+.App-intro {
+  font-size: large;
+}
