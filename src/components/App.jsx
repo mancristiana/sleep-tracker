@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './../assets/logo.svg';
+import Calendar from './Calendar.jsx';
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Sleep Tracker</h1>
         </header>
+        <Calendar />
       </div>
     );
   }

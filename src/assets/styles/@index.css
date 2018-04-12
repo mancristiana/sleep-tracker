@@ -5,6 +5,12 @@
   src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v20/neILzCirqoswsqX9zoKmNg.ttf) format('truetype');
 }
 @font-face {
+  font-family: 'Nanum Gothic Coding';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NanumGothicCoding'), url(https://fonts.gstatic.com/s/nanumgothiccoding/v6/8QIVdjzHisX_8vv59_xMxtPFW4IXROws-6M7Ug.ttf) format('truetype');
+}
+@font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -30,17 +36,35 @@ h6 {
 p {
   font-family: 'Roboto', sans-serif;
 }
-.App-logo {
-  height: 80px;
-}
 .App-header {
   background-color: #111;
-  padding: 20px;
+  padding-left: 3em;
+}
+.App-logo {
+  display: inline-block;
+  margin: 1em;
+  height: 80px;
 }
 .App-title {
+  display: inline-block;
+  vertical-align: top;
   color: #5d4a8f;
   font-size: 2em;
 }
-.App-intro {
-  font-size: large;
+.Calendar {
+  margin: 2em;
+}
+.Calendar-days {
+  font-family: 'Nanum Gothic Coding', monospace;
+  line-height: 2em;
+}
+.Calendar-days .day .name {
+  margin-right: 1em;
+  display: inline-block;
+}
+.Calendar-days .day .number {
+  background-color: #5d4a8f;
+  width: 2em;
+  text-align: center;
+  display: inline-block;
 }

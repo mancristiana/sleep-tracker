@@ -1,0 +1,22 @@
+@import '@variables';
+
+.Calendar {
+  margin: 2em;
+  &-days {
+    font-family: @font-mono;
+    line-height: 2em;
+    .day {
+      //margin-bottom: 1em;
+      .name {
+        margin-right: 1em;
+        display: inline-block;
+      }
+      .number {
+        background-color: @brand-primary;
+        width: 2em;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+  }
+}
