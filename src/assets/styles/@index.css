@@ -65,6 +65,8 @@ p {
 .Calendar-days .day .number {
   background-color: #5d4a8f;
   width: 2em;
+  height: 2.1em;
   text-align: center;
   display: inline-block;
+  font-family: 'Lobster', cursive, sans-serif;
 }
