@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './../assets/logo.svg';
-import Calendar from './Calendar.jsx';
+import Calendar from './calendar/Calendar.jsx';
 
 class App extends Component {
   render() {
