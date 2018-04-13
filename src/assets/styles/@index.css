@@ -90,6 +90,7 @@ p {
 }
 .Calendar-times {
   margin-left: 27px;
+  margin-bottom: 1em;
 }
 @media (min-width: 576px) {
   .Calendar-times {
@@ -102,15 +103,15 @@ p {
   }
 }
 .Calendar-times .time {
-  background-color: #5d4a8f;
   font-family: 'Lobster', cursive, sans-serif;
   line-height: 2em;
   text-align: center;
   width: 2em;
+  text-align: left;
   width: 4.16666667%;
 }
 .Calendar-times .time:nth-child(even) {
-  color: #5d4a8f;
+  color: transparent;
 }
 @media (min-width: 576px) {
   .Calendar-times .time:nth-child(even) {
@@ -134,13 +135,22 @@ p {
   }
 }
 .Calendar-days .day .number {
-  background-color: #5d4a8f;
   font-family: 'Lobster', cursive, sans-serif;
   line-height: 2em;
   text-align: center;
   width: 2em;
-  height: 2.1em;
+  background-color: #5d4a8f;
+  height: 42px;
 }
 .Calendar-canvas {
   width: 100%;
+}
+.Sleep {
+  position: relative;
+}
+.Sleep .sleep {
+  position: absolute;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
 }

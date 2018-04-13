@@ -1,8 +1,20 @@
 import moment from 'moment';
 
+export const getTimeDuration = time => {
+  return moment.duration(time).asHours();
+};
+
+export const getTimeDurationOffset = (time, offset) => {
+  return (getTimeDuration(time) + 24 - offset) % 24;
+};
+
+export const getFirstDayOfMonth = () => {
+  return moment().startOf('month');
+};
+
 export const getDaysOfMonth = () => {
   let daysOfMonth = [];
-  let monthDate = moment().startOf('month');
+  let monthDate = getFirstDayOfMonth();
   let daysCount = monthDate.daysInMonth();
 
   for (let i = 0; i < daysCount; i++) {

@@ -1,7 +1,6 @@
 @import '@variables';
 
 .numbering() {
-  background-color: @brand-primary;
   font-family: @font-heading;
   line-height: 2em;
   text-align: center;
@@ -19,6 +18,7 @@
 
   &-times {
     margin-left: 27px;
+    margin-bottom: 1em;
 
     @media (min-width: @size-media-sm) {
       margin-left: 72px;
@@ -29,13 +29,14 @@
 
     .time {
       &:nth-child(even) {
-        color: @brand-primary;
+        color: transparent;
         @media (min-width: @size-media-sm) {
           color: inherit;
         }
       }
 
       .numbering();
+      text-align: left;
       width: 100% / 24;
     }
   }
@@ -54,7 +55,8 @@
       }
       .number {
         .numbering();
-        height: 2.1em;
+        background-color: @brand-primary;
+        height: 42px;
       }
     }
   }

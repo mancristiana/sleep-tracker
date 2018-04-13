@@ -12,7 +12,7 @@ class Calendar extends Component {
         <CalendarTimes times={getTimesOfDay(offset)} />
         <div className="container">
           <CalendarDays days={getDaysOfMonth()} />
-          <CalendarCanvas />
+          <CalendarCanvas offset={offset} />
         </div>
       </div>
     );
