@@ -15,3 +15,12 @@ export const getDaysOfMonth = () => {
   }
   return daysOfMonth;
 };
+
+export const getTimesOfDay = (offset = 0) => {
+  let timesOfDay = [];
+  for (let i = 0; i < 24; i++) {
+    timesOfDay.push((i + offset) % 24);
+  }
+
+  return timesOfDay;
+};

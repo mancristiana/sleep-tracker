@@ -1,2 +1,2 @@
 export { DAYS } from './statics';
-export { getDaysOfMonth } from './time';
+export { getDaysOfMonth, getTimesOfDay } from './time';

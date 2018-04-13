@@ -1,24 +1,64 @@
 @import '@variables';
 
+.numbering() {
+  background-color: @brand-primary;
+  font-family: @font-heading;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+}
+
 .Calendar {
-  margin: 2em;
+  margin: 0 0.5em;
+  @media (min-width: @size-media-sm) {
+    margin: 1em;
+  }
+  @media (min-width: @size-media-md) {
+    margin: 2em;
+  }
+
+  &-times {
+    margin-left: 27px;
+
+    @media (min-width: @size-media-sm) {
+      margin-left: 72px;
+    }
+    @media (min-width: @size-media-md) {
+      margin-left: 90px;
+    }
+
+    .time {
+      &:nth-child(even) {
+        color: @brand-primary;
+        @media (min-width: @size-media-sm) {
+          color: inherit;
+        }
+      }
+
+      .numbering();
+      width: 100% / 24;
+    }
+  }
   &-days {
     font-family: @font-mono;
     line-height: 2em;
     .day {
-      //margin-bottom: 1em;
+      display: flex;
       .name {
-        margin-right: 1em;
-        display: inline-block;
+        display: none;
+
+        @media (min-width: @size-media-sm) {
+          display: initial;
+          margin-right: 1em;
+        }
       }
       .number {
-        background-color: @brand-primary;
-        width: 2em;
+        .numbering();
         height: 2.1em;
-        text-align: center;
-        display: inline-block;
-        font-family: @font-heading;
       }
     }
+  }
+  &-canvas {
+    width: 100%;
   }
 }

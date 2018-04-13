@@ -19,11 +19,21 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  line-height: 1.7;
   background: #222;
   color: white;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.7;
+  font-size: 14px;
+}
+@media (min-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
 }
 h1,
 h2,
@@ -36,6 +46,10 @@ h6 {
 p {
   font-family: 'Roboto', sans-serif;
 }
+.container {
+  display: flex;
+  width: 100%;
+}
 .App-header {
   background-color: #111;
   padding-left: 3em;
@@ -43,7 +57,17 @@ p {
 .App-logo {
   display: inline-block;
   margin: 1em;
-  height: 80px;
+  height: 50px;
+}
+@media (min-width: 576px) {
+  .App-logo {
+    height: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .App-logo {
+    height: 80px;
+  }
 }
 .App-title {
   display: inline-block;
@@ -52,21 +76,71 @@ p {
   font-size: 2em;
 }
 .Calendar {
-  margin: 2em;
+  margin: 0 0.5em;
+}
+@media (min-width: 576px) {
+  .Calendar {
+    margin: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .Calendar {
+    margin: 2em;
+  }
+}
+.Calendar-times {
+  margin-left: 27px;
+}
+@media (min-width: 576px) {
+  .Calendar-times {
+    margin-left: 72px;
+  }
+}
+@media (min-width: 768px) {
+  .Calendar-times {
+    margin-left: 90px;
+  }
+}
+.Calendar-times .time {
+  background-color: #5d4a8f;
+  font-family: 'Lobster', cursive, sans-serif;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+  width: 4.16666667%;
+}
+.Calendar-times .time:nth-child(even) {
+  color: #5d4a8f;
+}
+@media (min-width: 576px) {
+  .Calendar-times .time:nth-child(even) {
+    color: inherit;
+  }
 }
 .Calendar-days {
   font-family: 'Nanum Gothic Coding', monospace;
   line-height: 2em;
 }
+.Calendar-days .day {
+  display: flex;
+}
 .Calendar-days .day .name {
-  margin-right: 1em;
-  display: inline-block;
+  display: none;
+}
+@media (min-width: 576px) {
+  .Calendar-days .day .name {
+    display: initial;
+    margin-right: 1em;
+  }
 }
 .Calendar-days .day .number {
   background-color: #5d4a8f;
+  font-family: 'Lobster', cursive, sans-serif;
+  line-height: 2em;
+  text-align: center;
   width: 2em;
   height: 2.1em;
-  text-align: center;
-  display: inline-block;
-  font-family: 'Lobster', cursive, sans-serif;
+}
+.Calendar-canvas {
+  width: 100%;
 }
