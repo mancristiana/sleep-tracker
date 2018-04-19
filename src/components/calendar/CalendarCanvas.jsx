@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import { getFirstDayOfMonth, getTimeDurationOffset } from './../../utils';
-import sleepData from './../../model/sleep.mock';
+import { getAllSleep } from './../../model/sleep';
 
 import moment from 'moment';
 
 class CalendarCanvas extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sleepData: []
+    };
+  }
   componentWillMount() {
-    this.setState({
-      sleepData: sleepData
+    getAllSleep().then(data => {
+      this.setState({
+        sleepData: data
+      });
     });
   }
 
