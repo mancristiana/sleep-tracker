@@ -1,6 +1,6 @@
 @import '@variables';
 
-.buttonVariant(@color; @background; @border) {
+.buttonVariant(@color; @background; @border; @darken: 10%) {
   color: @color;
   background-color: @background;
   border-color: @border;
@@ -10,7 +10,7 @@
   &:focus,
   &:active {
     color: @color;
-    background-color: darken(@background, 10%);
+    background-color: darken(@background, @darken);
     border-color: darken(@border, 7%);
   }
 }
@@ -30,6 +30,10 @@
     .buttonVariant(white; @brand-primary; @brand-primary);
   }
 
+  &-secondary {
+    .buttonVariant(white; @brand-secondary; @brand-secondary);
+  }
+
   &-success {
     .buttonVariant(white; @brand-success; @brand-success);
   }
@@ -44,6 +48,10 @@
 
   &-danger {
     .buttonVariant(white; @brand-danger; @brand-danger);
+  }
+
+  &-subtile {
+    .buttonVariant(#090909; #1b1a1a; #1b1a1a; 2%);
   }
 
   &-small {

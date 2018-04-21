@@ -3,7 +3,7 @@
 //   overflow: hidden;
 // }
 
-.BaseModal-transition {
+.Modal-transition {
   &-enter {
     opacity: 0.01;
   }
@@ -22,7 +22,7 @@
 
 // The modal wrapper: absolute positioning;
 // 100% of the browser window height and width.
-.BaseModal-overlay {
+.Modal-overlay {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,53 +56,37 @@
 }
 
 // The modal window: a empty div; vertical and horizontal cenetered.
-.BaseModal {
+.Modal {
+  position: relative;
   width: 100%;
   background-color: #222;
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+  .radiusShadowDefault;
   @media (min-width: @size-media-sm) {
     width: 32rem;
   }
 
+  &-heading {
+    .accentText;
+    font-size: 36px;
+    line-height: normal;
+    padding: 15px;
+    border-bottom: #090909 solid 1pt;
+  }
+
   &-content {
-    padding: 1em;
+    padding: 15px;
+  }
+
+  &-footer {
+    border-top: #090909 solid 1pt;
+    padding: 15px;
   }
 
   &-close {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
-    background: #fff;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0;
-    border: 0;
-    cursor: pointer;
-    outline: 0;
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      top: 1.2rem;
-      left: 0.25rem;
-      width: 2rem;
-      height: 0.1rem;
-      background-color: #888;
-    }
-
-    &:before {
-      transform: rotate(45deg);
-    }
-    &:after {
-      transform: rotate(-45deg);
-    }
-
-    &:hover:before,
-    &:hover:after {
-      background-color: #444;
-    }
+    padding: 1em;
   }
 }
 

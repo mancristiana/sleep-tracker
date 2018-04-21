@@ -191,6 +191,19 @@ p {
   background-color: #47396d;
   border-color: #4e3e77;
 }
+.Button-secondary {
+  color: white;
+  background-color: #c5a6c3;
+  border-color: #c5a6c3;
+  transition: all 0.3s ease-in-out;
+}
+.Button-secondary:hover,
+.Button-secondary:focus,
+.Button-secondary:active {
+  color: white;
+  background-color: #b187ae;
+  border-color: #b790b4;
+}
 .Button-success {
   color: white;
   background-color: #92ca37;
@@ -243,24 +256,37 @@ p {
   background-color: #8e183c;
   border-color: #9b1b41;
 }
+.Button-subtile {
+  color: #090909;
+  background-color: #1b1a1a;
+  border-color: #1b1a1a;
+  transition: all 0.3s ease-in-out;
+}
+.Button-subtile:hover,
+.Button-subtile:focus,
+.Button-subtile:active {
+  color: #090909;
+  background-color: #161515;
+  border-color: #090808;
+}
 .Button-small {
   padding: 0.3rem 0.6rem;
 }
-.BaseModal-transition-enter {
+.Modal-transition-enter {
   opacity: 0.01;
 }
-.BaseModal-transition-enter-active {
+.Modal-transition-enter-active {
   opacity: 1;
   transition: opacity 750ms ease-in;
 }
-.BaseModal-transition-exit {
+.Modal-transition-exit {
   opacity: 1;
 }
-.BaseModal-transition-exit-active {
+.Modal-transition-exit-active {
   opacity: 0.01;
   transition: opacity 500ms ease-in;
 }
-.BaseModal-overlay {
+.Modal-overlay {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,49 +316,38 @@ p {
     opacity: 1;
   }
 }
-.BaseModal {
+.Modal {
+  position: relative;
   width: 100%;
   background-color: #222;
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  border: 0;
 }
 @media (min-width: 576px) {
-  .BaseModal {
+  .Modal {
     width: 32rem;
   }
 }
-.BaseModal-content {
-  padding: 1em;
+.Modal-heading {
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-size: 36px;
+  line-height: normal;
+  padding: 15px;
+  border-bottom: #090909 solid 1pt;
 }
-.BaseModal-close {
-  position: fixed;
+.Modal-content {
+  padding: 15px;
+}
+.Modal-footer {
+  border-top: #090909 solid 1pt;
+  padding: 15px;
+}
+.Modal-close {
+  position: absolute;
   top: 0;
   right: 0;
-  background: #fff;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-  border: 0;
-  cursor: pointer;
-  outline: 0;
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
-}
-.BaseModal-close:before,
-.BaseModal-close:after {
-  content: '';
-  position: absolute;
-  top: 1.2rem;
-  left: 0.25rem;
-  width: 2rem;
-  height: 0.1rem;
-  background-color: #888;
-}
-.BaseModal-close:before {
-  transform: rotate(45deg);
-}
-.BaseModal-close:after {
-  transform: rotate(-45deg);
-}
-.BaseModal-close:hover:before,
-.BaseModal-close:hover:after {
-  background-color: #444;
+  padding: 1em;
 }

@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export class Button extends Component {
-  propTypes = {
-    type: PropTypes.oneOf(['primary', 'success', 'info', 'warning', 'danger']),
-    size: PropTypes.oneOf(['small'])
+  static propTypes = {
+    type: PropTypes.oneOf([
+      'primary',
+      'secondary',
+      'success',
+      'info',
+      'warning',
+      'danger',
+      'subtile'
+    ]),
+    size: PropTypes.oneOf(['small']),
+    onClick: PropTypes.func
   };
-
-  constructor(props) {
-    super(props);
-  }
 
   getBtnStyle = () => {
     return `Button-${this.props.type}`;
@@ -23,7 +28,7 @@ export class Button extends Component {
     return (
       <button
         className={['Button', this.getBtnStyle(), this.getBtnSize()].join(' ')}
-        onClick={() => this.props.onClick()}>
+        onClick={() => this.props.onClick && this.props.onClick()}>
         {this.props.children}
       </button>
     );

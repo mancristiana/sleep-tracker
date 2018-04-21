@@ -4,11 +4,6 @@ import { Button } from './Button';
 import Fa from '@fortawesome/react-fontawesome';
 
 export class Modal extends Component {
-  // Init of the component before it is mounted.
-  constructor(props) {
-    super(props);
-  }
-
   // Add listeners immediately after the component is mounted.
   componentDidMount() {
     window.addEventListener('keyup', this.handleKeyUp, false);
@@ -52,15 +47,17 @@ export class Modal extends Component {
     const { onClose, children } = this.props;
 
     return (
-      <CSSTransition classNames="BaseModal-transition">
-        <div className="BaseModal-overlay">
-          <div className="BaseModal" ref={elem => (this.modal = elem)}>
-            <div className="BaseModal-content">{children}</div>
-          </div>
+      <CSSTransition timeout={500} classNames="Modal-transition">
+        <div className="Modal-overlay">
+          <div className="Modal" ref={elem => (this.modal = elem)}>
+            <div className="Modal-close">
+              <Button type="subtile" size="small" onClick={onClose}>
+                <Fa icon="times" />
+              </Button>
+            </div>
 
-          <Button type="default" onClick={onClose}>
-            <Fa icon="times" />
-          </Button>
+            <div className="Modal-children">{children}</div>
+          </div>
         </div>
       </CSSTransition>
     );
