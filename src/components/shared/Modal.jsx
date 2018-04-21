@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { Button } from './Button';
+import Fa from '@fortawesome/react-fontawesome';
 
-class BaseModal extends Component {
+export class Modal extends Component {
   // Init of the component before it is mounted.
   constructor(props) {
     super(props);
@@ -49,15 +52,17 @@ class BaseModal extends Component {
     const { onClose, children } = this.props;
 
     return (
-      <div className="BaseModal-overlay">
-        <div className="BaseModal" ref={elem => (this.modal = elem)}>
-          <div className="BaseModal-content">{children}</div>
-        </div>
+      <CSSTransition classNames="BaseModal-transition">
+        <div className="BaseModal-overlay">
+          <div className="BaseModal" ref={elem => (this.modal = elem)}>
+            <div className="BaseModal-content">{children}</div>
+          </div>
 
-        <button type="button" className="BaseModal-Close" onClick={onClose} />
-      </div>
+          <Button type="default" onClick={onClose}>
+            <Fa icon="times" />
+          </Button>
+        </div>
+      </CSSTransition>
     );
   }
 }
-
-export default BaseModal;

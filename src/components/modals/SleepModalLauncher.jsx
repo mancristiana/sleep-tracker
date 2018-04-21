@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BaseModal from './BaseModal';
+import { Button, Modal } from './../shared';
 import SleepModal from './SleepModal';
 
 class SleepModalLauncher extends Component {
@@ -20,17 +20,14 @@ class SleepModalLauncher extends Component {
     const { showModal } = this.state;
     return (
       <div className="SleepModalLauncher">
-        <button
-          type="button"
-          className="SleepModalLauncher-Button"
-          onClick={() => this.handleToggleModal()}>
-          Open Modal
-        </button>
+        <Button type="primary" onClick={() => this.handleToggleModal()}>
+          Add new sleep
+        </Button>
 
         {showModal && (
-          <BaseModal onClose={() => this.handleToggleModal()}>
+          <Modal onClose={() => this.handleToggleModal()}>
             <SleepModal />
-          </BaseModal>
+          </Modal>
         )}
       </div>
     );

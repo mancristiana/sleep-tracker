@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Lobster';
+  font-family: 'Amatic SC';
   font-style: normal;
   font-weight: 400;
-  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v20/neILzCirqoswsqX9zoKmNg.ttf) format('truetype');
+  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(https://fonts.gstatic.com/s/amaticsc/v11/TUZyzwprpvBS1izr_vOECuSa.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Nanum Gothic Coding';
@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lobster', cursive, sans-serif;
+  font-family: 'Amatic SC', cursive, sans-serif;
 }
 p {
   font-family: 'Roboto', sans-serif;
@@ -103,7 +103,7 @@ p {
   }
 }
 .Calendar-times .time {
-  font-family: 'Lobster', cursive, sans-serif;
+  font-family: 'Amatic SC', cursive, sans-serif;
   line-height: 2em;
   text-align: center;
   width: 2em;
@@ -135,7 +135,7 @@ p {
   }
 }
 .Calendar-days .day .number {
-  font-family: 'Lobster', cursive, sans-serif;
+  font-family: 'Amatic SC', cursive, sans-serif;
   line-height: 2em;
   text-align: center;
   width: 2em;
@@ -153,4 +153,186 @@ p {
   height: 30px;
   text-align: center;
   vertical-align: middle;
+}
+.Button {
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  border: 0;
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive, sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+}
+.Button-default {
+  color: black;
+  background-color: #333;
+  border-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+.Button-default:hover,
+.Button-default:focus,
+.Button-default:active {
+  color: black;
+  background-color: #1a1a1a;
+  border-color: #212121;
+}
+.Button-primary {
+  color: white;
+  background-color: #5d4a8f;
+  border-color: #5d4a8f;
+  transition: all 0.3s ease-in-out;
+}
+.Button-primary:hover,
+.Button-primary:focus,
+.Button-primary:active {
+  color: white;
+  background-color: #47396d;
+  border-color: #4e3e77;
+}
+.Button-success {
+  color: white;
+  background-color: #92ca37;
+  border-color: #92ca37;
+  transition: all 0.3s ease-in-out;
+}
+.Button-success:hover,
+.Button-success:focus,
+.Button-success:active {
+  color: white;
+  background-color: #75a32b;
+  border-color: #7eaf2e;
+}
+.Button-info {
+  color: white;
+  background-color: #005fad;
+  border-color: #005fad;
+  transition: all 0.3s ease-in-out;
+}
+.Button-info:hover,
+.Button-info:focus,
+.Button-info:active {
+  color: white;
+  background-color: #00437a;
+  border-color: #004b89;
+}
+.Button-warning {
+  color: white;
+  background-color: #e2ba4d;
+  border-color: #e2ba4d;
+  transition: all 0.3s ease-in-out;
+}
+.Button-warning:hover,
+.Button-warning:focus,
+.Button-warning:active {
+  color: white;
+  background-color: #d9a823;
+  border-color: #ddae2e;
+}
+.Button-danger {
+  color: white;
+  background-color: #b9204e;
+  border-color: #b9204e;
+  transition: all 0.3s ease-in-out;
+}
+.Button-danger:hover,
+.Button-danger:focus,
+.Button-danger:active {
+  color: white;
+  background-color: #8e183c;
+  border-color: #9b1b41;
+}
+.Button-small {
+  padding: 0.3rem 0.6rem;
+}
+.BaseModal-transition-enter {
+  opacity: 0.01;
+}
+.BaseModal-transition-enter-active {
+  opacity: 1;
+  transition: opacity 750ms ease-in;
+}
+.BaseModal-transition-exit {
+  opacity: 1;
+}
+.BaseModal-transition-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}
+.BaseModal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  opacity: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  animation: show 0.5s ease;
+}
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.BaseModal {
+  width: 100%;
+  background-color: #222;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 576px) {
+  .BaseModal {
+    width: 32rem;
+  }
+}
+.BaseModal-content {
+  padding: 1em;
+}
+.BaseModal-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+.BaseModal-close:before,
+.BaseModal-close:after {
+  content: '';
+  position: absolute;
+  top: 1.2rem;
+  left: 0.25rem;
+  width: 2rem;
+  height: 0.1rem;
+  background-color: #888;
+}
+.BaseModal-close:before {
+  transform: rotate(45deg);
+}
+.BaseModal-close:after {
+  transform: rotate(-45deg);
+}
+.BaseModal-close:hover:before,
+.BaseModal-close:hover:after {
+  background-color: #444;
 }

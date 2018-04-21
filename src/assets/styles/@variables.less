@@ -1,13 +1,40 @@
 @font-paragraph: 'Roboto', sans-serif;
 @font-mono: 'Nanum Gothic Coding', monospace;
-@font-heading: 'Lobster', cursive, sans-serif;
+@font-heading: 'Amatic SC', cursive, sans-serif;
 @line-height-base: 1.7;
 
 @brand-primary: #5d4a8f;
 @brand-secondary: #c5a6c3;
+@gray-light: #333;
+@brand-success: #92ca37;
+@brand-info: rgb(0, 95, 173);
+@brand-warning: rgb(226, 186, 77);
+@brand-danger: #b9204e;
 
 // @media (min-width: @size-media-sm) {}
 @size-media-sm: 576px;
 @size-media-md: 768px;
 @size-media-lg: 992px;
 @size-media-xl: 1200px;
+
+.transitionDefault() {
+  transition: all 0.3s ease-in-out;
+}
+
+.boxShadow(@color) {
+  box-shadow: 0.2rem 0.2rem 0.2rem @color;
+}
+
+.radiusShadowDefault() {
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  .boxShadow(fade(black, 10%));
+  border: 0;
+}
+
+.accentText() {
+  // text-transform: uppercase;
+  font-size: 20px;
+  //font-weight: bold;
+  font-family: @font-heading;
+}

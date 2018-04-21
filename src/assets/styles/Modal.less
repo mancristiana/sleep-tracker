@@ -3,6 +3,23 @@
 //   overflow: hidden;
 // }
 
+.BaseModal-transition {
+  &-enter {
+    opacity: 0.01;
+  }
+  &-enter-active {
+    opacity: 1;
+    transition: opacity 750ms ease-in;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0.01;
+    transition: opacity 500ms ease-in;
+  }
+}
+
 // The modal wrapper: absolute positioning;
 // 100% of the browser window height and width.
 .BaseModal-overlay {
@@ -14,7 +31,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 1rem;
+  padding: 1em;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
   opacity: 1;
@@ -41,7 +58,7 @@
 // The modal window: a empty div; vertical and horizontal cenetered.
 .BaseModal {
   width: 100%;
-  background-color: #fff;
+  background-color: #222;
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
   @media (min-width: @size-media-sm) {
     width: 32rem;

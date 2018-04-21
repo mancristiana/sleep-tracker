@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { getFirstDayOfMonth, getTimeDurationOffset } from './../../utils';
-import { getAllSleep } from './../../model/sleep';
+import { getFirstDayOfMonth, getTimeDurationOffset } from './../../../utils';
+import { getAllSleep } from './../../../model/sleep';
 
 import moment from 'moment';
 

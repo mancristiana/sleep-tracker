@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import CalendarTimes from './CalendarTimes';
 import CalendarDays from './CalendarDays';
 import CalendarCanvas from './CalendarCanvas';
-import { getDaysOfMonth, getTimesOfDay } from './../../utils';
-import SleepModalLauncher from './../modals/SleepModalLauncher';
+import { getDaysOfMonth, getTimesOfDay } from './../../../utils';
+import SleepModalLauncher from './../../modals/SleepModalLauncher';
 
 class Calendar extends Component {
   render() {

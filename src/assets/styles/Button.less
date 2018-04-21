@@ -1,0 +1,52 @@
+@import '@variables';
+
+.buttonVariant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  .transitionDefault;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: @color;
+    background-color: darken(@background, 10%);
+    border-color: darken(@border, 7%);
+  }
+}
+
+.Button {
+  .radiusShadowDefault;
+  .accentText;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  //Button styles
+  &-default {
+    .buttonVariant(black; @gray-light; @gray-light);
+  }
+
+  &-primary {
+    .buttonVariant(white; @brand-primary; @brand-primary);
+  }
+
+  &-success {
+    .buttonVariant(white; @brand-success; @brand-success);
+  }
+
+  &-info {
+    .buttonVariant(white; @brand-info; @brand-info);
+  }
+
+  &-warning {
+    .buttonVariant(white; @brand-warning; @brand-warning);
+  }
+
+  &-danger {
+    .buttonVariant(white; @brand-danger; @brand-danger);
+  }
+
+  &-small {
+    padding: 0.3rem 0.6rem;
+  }
+}
