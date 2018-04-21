@@ -1,8 +1,8 @@
 @import '@variables';
 
 .numbering() {
-  font-family: @font-heading;
-  line-height: 2em;
+  font-family: @font-paragraph;
+  font-size: 16px;
   text-align: center;
   width: 2em;
 }
@@ -41,7 +41,8 @@
     }
   }
   &-days {
-    font-family: @font-mono;
+    font-family: @font-heading;
+
     line-height: 2em;
     .day {
       display: flex;
@@ -51,11 +52,11 @@
         @media (min-width: @size-media-sm) {
           display: initial;
           margin-right: 1em;
+          width: 20px;
         }
       }
       .number {
         .numbering();
-        background-color: @brand-primary;
         height: 42px;
       }
     }
