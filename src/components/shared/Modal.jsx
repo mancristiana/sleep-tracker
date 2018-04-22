@@ -44,12 +44,15 @@ export class Modal extends Component {
   };
 
   render() {
-    const { onClose, children } = this.props;
+    const { onClose, children, width = null } = this.props;
 
     return (
       <CSSTransition timeout={500} classNames="Modal-transition">
         <div className="Modal-overlay">
-          <div className="Modal" ref={elem => (this.modal = elem)}>
+          <div
+            className="Modal"
+            style={{ width: width }}
+            ref={elem => (this.modal = elem)}>
             <div className="Modal-close">
               <Button type="subtile" size="small" onClick={onClose}>
                 <Fa icon="times" />

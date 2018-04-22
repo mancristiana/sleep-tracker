@@ -1,0 +1,49 @@
+@import '@variables';
+
+.TimePicker-root {
+  width: 288px;
+}
+
+.TimePicker-header {
+  color: white;
+  padding: 20px 0;
+  line-height: 58px;
+  font-size: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  user-select: none;
+  text-align: center;
+  background: @brand-primary;
+  margin: -25px -30px -15px;
+  .radiusShadowDefault;
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+
+.TimePicker-time {
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.TimePicker-placeholder {
+  flex: 1;
+}
+
+.TimePicker-ampm {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 16px;
+  font-weight: 700;
+}
+
+.TimePicker-select {
+  color: white;
+}
+.TimePicker-body {
+  padding: 24px 16px;
+  background: #b3b3b3;
+}

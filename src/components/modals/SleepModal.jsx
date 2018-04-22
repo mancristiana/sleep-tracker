@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Input } from './../shared';
+import { Button, Input, TimePicker } from './../shared';
 import { Form } from 'react-advanced-form';
 
 class SleepModal extends Component {
@@ -9,8 +9,8 @@ class SleepModal extends Component {
         <div className="Modal-heading">Add Sleep</div>
         <div className="Modal-content">
           <Form>
-            <Input name="userEmail" required />
-            <Input name="userPassword" type="password" required />
+            <Input label="Comment" name="comment" />
+            <TimePicker label="Bed time" name="timePicker" required />
           </Form>
         </div>
         <div className="Modal-footer">

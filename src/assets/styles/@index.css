@@ -13,8 +13,20 @@
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
 }
 body {
   margin: 0;
@@ -389,4 +401,124 @@ p {
 .Form-group input.Form-input:hover {
   transition: background-color 500ms ease-in-out;
   background-color: #131212;
+}
+.TimePicker-root {
+  width: 288px;
+}
+.TimePicker-header {
+  color: white;
+  padding: 20px 0;
+  line-height: 58px;
+  font-size: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  user-select: none;
+  text-align: center;
+  background: #5d4a8f;
+  margin: -25px -30px -15px;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+.TimePicker-time {
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+.TimePicker-placeholder {
+  flex: 1;
+}
+.TimePicker-ampm {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 16px;
+  font-weight: 700;
+}
+.TimePicker-select {
+  color: white;
+}
+.TimePicker-body {
+  padding: 24px 16px;
+  background: #b3b3b3;
+}
+.Clock-root {
+  width: 256px;
+  height: 256px;
+  cursor: default;
+}
+.Clock-circle {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  background: #1b1a1a;
+  color: white;
+  position: relative;
+}
+.Clock-number {
+  width: 32px;
+  height: 32px;
+  left: calc(50% - 16px);
+  top: calc(50% - 16px);
+  position: absolute;
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  pointer-events: none;
+  user-select: none;
+}
+.Clock-number.selected {
+  color: white;
+}
+.Clock-smallNumber {
+  font-size: 12px;
+  color: #c5a6c3;
+}
+.Clock-pointer {
+  width: calc(50% - 20px);
+  height: 2px;
+  background-color: #5d4a8f;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 1px);
+  transform-origin: left center;
+  pointer-events: none;
+}
+.Clock-animatedPointer {
+  transition: all 500ms ease-in-out;
+}
+.Clock-smallPointer {
+  width: calc(50% - 52px);
+}
+.Clock-innerDot {
+  background-color: #eee;
+  position: absolute;
+  top: -3px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.Clock-outerDot {
+  border: 16px solid #5d4a8f;
+  border-width: 16px;
+  position: absolute;
+  top: -15px;
+  right: -16px;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+.Clock-outerDotOdd {
+  background: white;
+  width: 4px;
+  height: 4px;
+  border-width: 14px;
 }
