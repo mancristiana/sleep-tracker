@@ -4,6 +4,9 @@
   font-family: @font-form;
   label {
     text-transform: uppercase;
+    font-size: 11px;
+    display: block;
+    margin: 5px 15px;
   }
 
   .Form-text {
@@ -15,9 +18,12 @@
   }
 
   input.Form-input {
+    width: 100%;
+    display: block;
     background-color: @element-bg;
     color: @element-text;
     .radiusShadowDefault;
+    box-sizing: border-box;
     padding: 1em 2em;
     margin-bottom: 15px;
     border: 1pt solid @element-bg;

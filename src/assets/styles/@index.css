@@ -375,6 +375,9 @@ p {
 }
 .Form-group label {
   text-transform: uppercase;
+  font-size: 11px;
+  display: block;
+  margin: 5px 15px;
 }
 .Form-group .Form-text {
   color: #b1b1b1;
@@ -383,12 +386,15 @@ p {
   color: #b9204e;
 }
 .Form-group input.Form-input {
+  width: 100%;
+  display: block;
   background-color: #1b1a1a;
   color: white;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
   border: 0;
+  box-sizing: border-box;
   padding: 1em 2em;
   margin-bottom: 15px;
   border: 1pt solid #1b1a1a;
