@@ -3,14 +3,14 @@ import CalendarTimes from './CalendarTimes';
 import CalendarDays from './CalendarDays';
 import CalendarCanvas from './CalendarCanvas';
 import { getDaysOfMonth, getTimesOfDay } from './../../../utils';
-import SleepModalLauncher from './../../modals/SleepModalLauncher';
+import SleepModal from './../../modals/SleepModal';
 
 class Calendar extends Component {
   render() {
     const offset = 15;
     return (
       <div className="Calendar">
-        <SleepModalLauncher />
+        <SleepModal />
         <CalendarTimes times={getTimesOfDay(offset)} />
         <div className="container">
           <CalendarDays days={getDaysOfMonth()} />

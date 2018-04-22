@@ -44,7 +44,7 @@ export class Modal extends Component {
   };
 
   render() {
-    const { onClose, children, width = null } = this.props;
+    const { onClose, children, width = null, hasCloseButton } = this.props;
 
     return (
       <CSSTransition timeout={500} classNames="Modal-transition">
@@ -53,12 +53,13 @@ export class Modal extends Component {
             className="Modal"
             style={{ width: width }}
             ref={elem => (this.modal = elem)}>
-            <div className="Modal-close">
-              <Button type="subtile" size="small" onClick={onClose}>
-                <Fa icon="times" />
-              </Button>
-            </div>
-
+            {hasCloseButton && (
+              <div className="Modal-close">
+                <Button type="subtile" size="small" onClick={onClose}>
+                  <Fa icon="times" />
+                </Button>
+              </div>
+            )}
             <div className="Modal-children">{children}</div>
           </div>
         </div>
