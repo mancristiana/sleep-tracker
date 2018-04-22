@@ -1,0 +1,36 @@
+@import '@variables';
+
+.Form-group {
+  font-family: @font-form;
+  label {
+    text-transform: uppercase;
+  }
+
+  .Form-text {
+    color: #b1b1b1;
+  }
+
+  .Form-error {
+    color: @brand-danger;
+  }
+
+  input.Form-input {
+    background-color: @element-bg;
+    color: @element-text;
+    .radiusShadowDefault;
+    padding: 1em 2em;
+    margin-bottom: 15px;
+    border: 1pt solid @element-bg;
+
+    &:focus {
+      border: 1pt solid @brand-primary;
+      box-shadow: 0.1rem 0.1rem 0.1rem fade(@brand-primary, 50%);
+      outline: none;
+    }
+
+    &:hover {
+      transition: background-color 500ms ease-in-out;
+      background-color: darken(@element-bg, 3%);
+    }
+  }
+}

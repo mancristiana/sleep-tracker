@@ -358,3 +358,35 @@ p {
   right: 0;
   padding: 1em;
 }
+.Form-group {
+  font-family: 'Roboto', sans-serif;
+}
+.Form-group label {
+  text-transform: uppercase;
+}
+.Form-group .Form-text {
+  color: #b1b1b1;
+}
+.Form-group .Form-error {
+  color: #b9204e;
+}
+.Form-group input.Form-input {
+  background-color: #1b1a1a;
+  color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  border: 0;
+  padding: 1em 2em;
+  margin-bottom: 15px;
+  border: 1pt solid #1b1a1a;
+}
+.Form-group input.Form-input:focus {
+  border: 1pt solid #5d4a8f;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(93, 74, 143, 0.5);
+  outline: none;
+}
+.Form-group input.Form-input:hover {
+  transition: background-color 500ms ease-in-out;
+  background-color: #131212;
+}
